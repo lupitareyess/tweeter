@@ -23,3 +23,9 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ /* Apply Source Sans Pro front to everything in the body*/
+
+ body {
+  font-family: 'Source Sans Pro', sans-serif;
+ }
