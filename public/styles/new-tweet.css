@@ -35,4 +35,5 @@ main h2 {
     border-color: transparent;
     border-bottom-color: black;
     resize: none;
+    height: fit-content;
 }
