@@ -1,0 +1,38 @@
+button{
+background-color: #4056A1;
+color: white;
+font-family: 'Bungee';
+}
+
+textarea {
+  width: 953px;
+  height: 15px;
+  display: flex;
+}
+
+.counter {
+    font-family: 'Bungee';
+    display: flex;
+    justify-content: end;
+}
+
+main div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+main h2 {
+  font-family: 'Bungee', cursive;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#tweet-text{
+  width: 100%;
+  background-color: #f4f1ec;
+    border-color: transparent;
+    border-bottom-color: black;
+    resize: none;
+}
