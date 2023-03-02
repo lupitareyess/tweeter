@@ -23,7 +23,7 @@ const createTweetElement = (data) => {
         </header>
         <article>${content.text}</article>
         <footer>
-          <p>${created_at}</p>
+          <p>${timeago.format(created_at)}</p>
           <div>
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
@@ -53,10 +53,12 @@ const submitForm = () => {
 const loadTweets = () => {
   $.get('/tweets', (data) => {
     renderTweets(data);
-  })
-}
+  });
+};
+
 
 $(document).ready(function() {
-  submitForm()
+  submitForm();
   loadTweets();
+  timeStamp();
 });
