@@ -71,7 +71,16 @@ const renderTweets = (tweets) => {
   }
 }
 
+const submitForm = () => {
+  const str = $('form').serialize();
+  $('form').submit(function(event) {
+    event.preventDefault();
+    $.post('/tweets', str);
+  });
+};
+
 
 $(document).ready(function() {
   renderTweets(data);
+  submitForm()
 });
