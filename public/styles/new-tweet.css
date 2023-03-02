@@ -1,7 +1,7 @@
-button{
-background-color: #4056A1;
-color: white;
-font-family: 'Bungee';
+button {
+  background-color: #4056a1;
+  color: white;
+  font-family: "Bungee";
 }
 
 textarea {
@@ -11,9 +11,9 @@ textarea {
 }
 
 .counter {
-    font-family: 'Bungee';
-    display: flex;
-    justify-content: end;
+  font-family: "Bungee";
+  display: flex;
+  justify-content: end;
 }
 
 main div {
@@ -23,17 +23,22 @@ main div {
 }
 
 main h2 {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   font-weight: 300;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-#tweet-text{
+#tweet-text {
   width: 100%;
   background-color: #f4f1ec;
-    border-color: transparent;
-    border-bottom-color: black;
-    resize: none;
-    height: fit-content;
+  border-color: transparent;
+  border-bottom-color: black;
+  resize: none;
+  height: fit-content;
+}
+
+#tweet-container {
+  display: flex;
+  flex-direction: column;
 }
