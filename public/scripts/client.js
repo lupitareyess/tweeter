@@ -46,19 +46,26 @@ const renderTweets = (tweets) => {
 const submitForm = () => {
   $('#submit-form').submit(function(event) {
     event.preventDefault();
+
     const textAreaLength = $("#tweet-text").val().length;
     if (textAreaLength === 0) {
-      return alert('Tweet is too short')
+      return $("#tweet-error").text("Oops! Empty tweets are not valid. Please try again.").slideDown()
     }
     if (textAreaLength > 140) {
-      console.log(textAreaLength)
-      return alert('Tweet is too long!')
+      return $("#tweet-error").text("Tweet is too long. Lets stick to 140 characters!").slideDown();
     }
+
+    $('#tweet-error').hide();
     $.post('/tweets', $('#submit-form').serialize()).then(() => {
+      $("#tweet-text").val('');
+      $(".counter").val('140');
       loadTweets();
     })
   })
 };
+
+
+
 
 const loadTweets = () => {
   $.get('/tweets', (data) => {
