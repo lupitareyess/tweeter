@@ -54,9 +54,10 @@ const submitForm = () => {
       console.log(textAreaLength)
       return alert('Tweet is too long!')
     }
-    $.post('/tweets', $('#submit-form').serialize());
-
-  });
+    $.post('/tweets', $('#submit-form').serialize()).then(() => {
+      loadTweets();
+    })
+  })
 };
 
 const loadTweets = () => {
