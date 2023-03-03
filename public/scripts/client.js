@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 const createTweetElement = (data) => {
   const { user, content, created_at } = data;
 
@@ -43,10 +44,18 @@ const renderTweets = (tweets) => {
 }
 
 const submitForm = () => {
-  const str = $('form').serialize();
-  $('form').submit(function(event) {
+  $('#submit-form').submit(function(event) {
     event.preventDefault();
-    $.post('/tweets', str);
+    const textAreaLength = $("#tweet-text").val().length;
+    if (textAreaLength === 0) {
+      return alert('Tweet is too short')
+    }
+    if (textAreaLength > 140) {
+      console.log(textAreaLength)
+      return alert('Tweet is too long!')
+    }
+    $.post('/tweets', $('#submit-form').serialize());
+
   });
 };
 
@@ -58,7 +67,6 @@ const loadTweets = () => {
 
 
 $(document).ready(function() {
-  submitForm();
+  submitForm()
   loadTweets();
-  timeStamp();
 });

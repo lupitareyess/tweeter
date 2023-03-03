@@ -1,4 +1,5 @@
-$(document).ready(function() {
+
+const tweetLength = () => {
   $('#tweet-text').on('input', function() {
     const numOfCharacters = $(this).val().length;
     const remainingCharacters = 140 - numOfCharacters;
@@ -11,9 +12,10 @@ $(document).ready(function() {
     else {
       (counter).css('color', '');
     }
-
   });
+};
+
+$(document).ready(function() {
+  tweetLength()
 
 });
-
-
