@@ -4,6 +4,15 @@ button {
   font-family: "Bungee";
 }
 
+button:active {
+  background-color: #bb0c21;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 5px 5px grey;
+}
+
 .counter {
   font-family: "Bungee";
   display: flex;

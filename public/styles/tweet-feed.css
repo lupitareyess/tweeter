@@ -8,9 +8,13 @@
   margin-bottom: 15px;
 }
 
+.tweet:hover {
+  box-shadow: 0px 5px 5px grey;
+}
+
 .tweet header {
   background-color: transparent;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
@@ -53,14 +57,22 @@ footer div {
   display: flex;
   width: 10%;
   justify-content: space-between;
-    
 }
 
 footer .fa-solid {
-  color:#545149;
-
+  color: #001223;
 }
 
 footer .fa-solid:hover {
-  color: red;
+  color: #bb0c21;
+}
+
+footer .fa-solid:active {
+  animation: pop 0.7s linear 1;
+}
+
+@keyframes pop {
+  70% {
+    transform: scale(1.2);
+  }
 }
