@@ -22,7 +22,7 @@ const createTweetElement = (data) => {
           </div>
           <h3>${user.handle}</h3>
         </header>
-        <article>${content.text}</article>
+        <article>${escapeText(content.text)}</article>
         <footer>
           <p>${timeago.format(created_at)}</p>
           <div>
@@ -66,6 +66,11 @@ const loadTweets = () => {
   });
 };
 
+const escapeText = (str) => {
+  const article = document.createElement("article");
+  article.appendChild(document.createTextNode(str));
+  return article.innerHTML;
+}
 
 $(document).ready(function() {
   submitForm()
