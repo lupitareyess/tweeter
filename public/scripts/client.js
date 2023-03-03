@@ -49,14 +49,14 @@ const submitForm = () => {
 
     const textAreaLength = $("#tweet-text").val().length;
     if (textAreaLength === 0) {
-      return $("#tweet-error").text("Oops! Empty tweets are not valid. Please try again.").slideDown()
+      return $("#tweet-error").text("⚠️ Oops! Empty tweets are not valid. Please try again.").slideDown()
     }
     if (textAreaLength > 140) {
-      return $("#tweet-error").text("Tweet is too long. Lets stick to 140 characters!").slideDown();
+      return $("#tweet-error").text("⚠️ Tweet is too long. Lets stick to 140 characters!").slideDown();
     }
 
-    $('#tweet-error').hide();
     $.post('/tweets', $('#submit-form').serialize()).then(() => {
+      $('#tweet-error').text('').hide();
       $("#tweet-text").val('');
       $(".counter").val('140');
       loadTweets();

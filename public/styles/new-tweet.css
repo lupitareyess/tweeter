@@ -1,13 +1,7 @@
 button {
-  background-color: #4056a1;
+  background-color: #001233;
   color: white;
   font-family: "Bungee";
-}
-
-textarea {
-  width: 953px;
-  height: 15px;
-  display: flex;
 }
 
 .counter {
@@ -31,11 +25,12 @@ main h2 {
 
 #tweet-text {
   width: 100%;
-  background-color: #f4f1ec;
+  background-color: #fdf8f0;
   border-color: transparent;
   border-bottom-color: black;
   resize: none;
   height: fit-content;
+  display: flex;
 }
 
 #tweet-container {
@@ -46,8 +41,14 @@ main h2 {
 #tweet-error {
   display: none;
   justify-content: center;
-  width: 45%;
-  height: 50px;
+  width: 100%;
   align-items: center;
   border-style: solid;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 0;
+  background: #bb0c21;
+  color: white;
+  border-color: #001233;
 }

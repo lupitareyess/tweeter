@@ -63,7 +63,7 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header class="main-header">
       <div id="avatar">
         <img src="/images/profile-hex.png" />
       </div>
@@ -78,7 +78,9 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="post" action="/tweets" id="submit-form">
-          <div id="tweet-error"></div>
+          <div id="tweet-error">
+            <p></p>
+          </div>
           <textarea
             name="text"
             id="tweet-text"
