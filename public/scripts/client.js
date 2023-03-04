@@ -91,14 +91,6 @@ const scrollBackUp = () => {
   });
 };
 
-const pressToTweet = () => {
-  $('.button-to-tweet').on('click', function() {
-    $('.submit-tweet').slideDown('medium', function() {
-      $('#tweet-text').focus();
-    })
-  })
-}
-
 const toggleForm = () => {
   $('.button-to-tweet').on('click', function() {
     const form = $('#submit-form');
