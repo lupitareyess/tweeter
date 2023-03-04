@@ -74,6 +74,6 @@ main h2 {
   color: #bb0c21;
 }
 
-.submit-tweet {
+.hidden {
   display: none;
 }

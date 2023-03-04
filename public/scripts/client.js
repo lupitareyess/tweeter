@@ -99,23 +99,26 @@ const pressToTweet = () => {
   })
 }
 
+const toggleForm = () => {
+  $('.button-to-tweet').on('click', function() {
+    const form = $('#submit-form');
+    const composeHeader = $('.submit-tweet h2')
+    if (form.is(":hidden")) {
+      composeHeader.slideDown("slow")
+      form.slideDown("slow").next()
+
+    } else {
+      form.slideUp("slow");
+      composeHeader.slideUp("slow")
+    }
+  })
+};
+
+
 $(document).ready(function() {
   submitForm()
   loadTweets();
   scrollBackUp()
-  pressToTweet()
+  toggleForm()
 });
 
-
-  // const jumpFrom = document.querySelector('.button-to-tweet');
-  // // const jumpTo = document.querySelector('.tweet-button');
-  // const textArea = document.querySelector('#tweet-text');
-
-  // // jumpFrom.addEventListener('click', function() {
-  // //   // jumpTo.scrollIntoView({
-  // //   //   behavior: 'smooth',
-  // //   //   block: 'start'
-  // //   // })
-  // jumpFrom.addEventListener('click', function() {
-  //   textArea.focus();
-  // })
