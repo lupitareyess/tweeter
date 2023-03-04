@@ -39,7 +39,7 @@ const createTweetElement = (data) => {
 const renderTweets = (tweets) => {
   for (const tweet of tweets) {
     const newTweet = createTweetElement(tweet);
-    $("#tweet-container").prepend(newTweet);
+    $("#tweet-container").prepend(newTweet)
   }
 }
 
@@ -59,6 +59,7 @@ const submitForm = () => {
       $('#tweet-error').text('').hide();
       $("#tweet-text").val('');
       $(".counter").html('140');
+      $('#tweet-container').empty();
       loadTweets();
     })
   })
@@ -90,16 +91,19 @@ const scrollBackUp = () => {
   });
 };
 
-const clickToTweet = () => {
+const scrollToTweet = () => {
   const jumpFrom = document.querySelector('.button-to-tweet');
-  const jumpTo = document.querySelector('h2');
+  // const jumpTo = document.querySelector('.tweet-button');
+  const textArea = document.querySelector('#tweet-text');
 
+  // jumpFrom.addEventListener('click', function() {
+  //   // jumpTo.scrollIntoView({
+  //   //   behavior: 'smooth',
+  //   //   block: 'start'
+  //   // })
   jumpFrom.addEventListener('click', function() {
-    jumpTo.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
+    textArea.focus();
+  })
 
 }
 
@@ -107,5 +111,5 @@ $(document).ready(function() {
   submitForm()
   loadTweets();
   scrollBackUp()
-  clickToTweet()
+  scrollToTweet()
 });
