@@ -44,7 +44,7 @@ const renderTweets = (tweets) => {
 }
 
 const submitForm = () => {
-  $('#submit-form').submit(function(event) {
+  $('#submit-form').on('submit', function(event) {
     event.preventDefault();
 
     const textAreaLength = $("#tweet-text").val().length;
@@ -55,17 +55,14 @@ const submitForm = () => {
       return $("#tweet-error").text("⚠️ Tweet is too long. Lets stick to 140 characters!").slideDown();
     }
 
-    $.post('/tweets', $('#submit-form').serialize()).then(() => {
+    $.post('/tweets', $(this).serialize()).then(() => {
       $('#tweet-error').text('').hide();
       $("#tweet-text").val('');
-      $(".counter").val('140');
+      $(".counter").html('140');
       loadTweets();
     })
   })
 };
-
-
-
 
 const loadTweets = () => {
   $.get('/tweets', (data) => {
@@ -79,7 +76,22 @@ const escapeText = (str) => {
   return article.innerHTML;
 }
 
+const scrollBackUp = () => {
+  $(window).on('scroll', function() {
+    const $button = '.bottom-button'
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.querySelector($button).classList.add('show');
+    } else {
+      document.querySelector($button).classList.remove('show');
+    }
+    document.querySelector($button).addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    });
+  });
+};
+
 $(document).ready(function() {
   submitForm()
   loadTweets();
+  scrollBackUp()
 });

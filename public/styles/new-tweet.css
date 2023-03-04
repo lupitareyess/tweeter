@@ -1,14 +1,14 @@
-button {
+.tweet-button {
   background-color: #001233;
   color: white;
   font-family: "Bungee";
 }
 
-button:active {
+.tweet-button:active {
   background-color: #bb0c21;
 }
 
-button:hover {
+.tweet-button:hover {
   cursor: pointer;
   box-shadow: 0px 5px 5px grey;
 }
@@ -36,10 +36,14 @@ main h2 {
   width: 100%;
   background-color: #fdf8f0;
   border-color: transparent;
-  border-bottom-color: black;
   resize: none;
   height: fit-content;
+  border-bottom-color: #001223;
   display: flex;
+}
+
+#tweet-text:focus {
+  outline: groove;
 }
 
 #tweet-container {
@@ -60,4 +64,12 @@ main h2 {
   background: #bb0c21;
   color: white;
   border-color: #001233;
+  border-width: 2px;
+  border-radius: 15px;
+  width: 60%;
+  margin: 0.7rem 0 0.7rem 14rem;
+}
+
+.red {
+  color: #bb0c21;
 }

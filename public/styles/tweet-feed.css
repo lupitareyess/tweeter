@@ -76,3 +76,41 @@ footer .fa-solid:active {
     transform: scale(1.2);
   }
 }
+
+.scroll-up {
+  justify-content: flex-end;
+}
+
+.fa-angles-up {
+  color: white;
+}
+
+.scroll-up {
+  position: sticky;
+  bottom: 10px;
+  margin-right: -20px;
+}
+
+.scroll-up .bottom-button {
+  width: 60px;
+  height: 60px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0;
+  border-radius: 90%;
+  box-shadow: none;
+  border-color: #001223;
+  background: #001223;
+  display: none;
+}
+
+.scroll-up .bottom-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 5px 5px grey;
+  background-color: #bb0c21;
+  border: #001223;
+}
+
+.bottom-button.show {
+  display: block;
+}
