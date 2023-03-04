@@ -90,8 +90,22 @@ const scrollBackUp = () => {
   });
 };
 
+const clickToTweet = () => {
+  const jumpFrom = document.querySelector('.button-to-tweet');
+  const jumpTo = document.querySelector('h2');
+
+  jumpFrom.addEventListener('click', function() {
+    jumpTo.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+
+}
+
 $(document).ready(function() {
   submitForm()
   loadTweets();
   scrollBackUp()
+  clickToTweet()
 });
