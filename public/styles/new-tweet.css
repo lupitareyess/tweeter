@@ -73,3 +73,7 @@ main h2 {
 .red {
   color: #bb0c21;
 }
+
+.submit-tweet {
+  display: none;
+}

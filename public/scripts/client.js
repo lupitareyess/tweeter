@@ -91,25 +91,31 @@ const scrollBackUp = () => {
   });
 };
 
-const scrollToTweet = () => {
-  const jumpFrom = document.querySelector('.button-to-tweet');
-  // const jumpTo = document.querySelector('.tweet-button');
-  const textArea = document.querySelector('#tweet-text');
-
-  // jumpFrom.addEventListener('click', function() {
-  //   // jumpTo.scrollIntoView({
-  //   //   behavior: 'smooth',
-  //   //   block: 'start'
-  //   // })
-  jumpFrom.addEventListener('click', function() {
-    textArea.focus();
+const pressToTweet = () => {
+  $('.button-to-tweet').on('click', function() {
+    $('.submit-tweet').slideDown('medium', function() {
+      $('#tweet-text').focus();
+    })
   })
-
 }
 
 $(document).ready(function() {
   submitForm()
   loadTweets();
   scrollBackUp()
-  scrollToTweet()
+  pressToTweet()
 });
+
+
+  // const jumpFrom = document.querySelector('.button-to-tweet');
+  // // const jumpTo = document.querySelector('.tweet-button');
+  // const textArea = document.querySelector('#tweet-text');
+
+  // // jumpFrom.addEventListener('click', function() {
+  // //   // jumpTo.scrollIntoView({
+  // //   //   behavior: 'smooth',
+  // //   //   block: 'start'
+  // //   // })
+  // jumpFrom.addEventListener('click', function() {
+  //   textArea.focus();
+  // })
