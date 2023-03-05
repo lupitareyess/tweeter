@@ -37,9 +37,7 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-  body {
-  }
-
   main {
+    margin: 8% 1.5% 1.5% 1.5%;
   }
 }

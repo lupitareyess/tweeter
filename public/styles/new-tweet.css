@@ -68,7 +68,7 @@ main h2 {
   color: white;
   border-color: #001233;
   border-width: thin;
-  border-radius: 1em;
+  border-radius: 1rem;
   width: 70%;
   margin: 1% 14% 1% 15%;
 }
@@ -79,4 +79,10 @@ main h2 {
 
 .hidden {
   display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .submit-tweet {
+    margin-top: 3rem;
+  }
 }

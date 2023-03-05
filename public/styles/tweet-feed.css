@@ -22,7 +22,7 @@
 }
 
 .tweet h3 {
-  padding: 0.2em 0.9em 0.1em 0.3em;
+  padding: 0.2rem 0.9rem 0.1rem 0.8rem;
 }
 
 .tweet header div {
@@ -112,4 +112,10 @@ footer .fa-solid:active {
 
 .bottom-button.show {
   display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  footer div {
+    width: 5.5rem;
+  }
 }
