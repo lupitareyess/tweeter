@@ -22,14 +22,13 @@
 main div {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 1%;
 }
 
 main h2 {
   font-family: "Bungee", cursive;
   font-weight: 300;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 1%;
 }
 
 #tweet-text {
@@ -40,6 +39,10 @@ main h2 {
   height: fit-content;
   border-bottom-color: #001223;
   display: flex;
+}
+
+.submit-tweet {
+  margin-top: 3%;
 }
 
 #tweet-text:focus {
@@ -60,14 +63,14 @@ main h2 {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 10px 0;
+  padding: 1%;
   background: #bb0c21;
   color: white;
   border-color: #001233;
-  border-width: 2px;
-  border-radius: 15px;
-  width: 60%;
-  margin: 0.7rem 0 0.7rem 14rem;
+  border-width: thin;
+  border-radius: 1em;
+  width: 70%;
+  margin: 1% 14% 1% 15%;
 }
 
 .red {

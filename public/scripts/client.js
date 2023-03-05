@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 const createTweetElement = (data) => {
   const { user, content, created_at } = data;
 
